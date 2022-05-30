@@ -1,5 +1,4 @@
 import loto_classes
-import functions
 
 #перемешаем бочонки в мешке
 barrels = loto_classes.Barrels.bochonki()
