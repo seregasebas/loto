@@ -3,7 +3,7 @@ import loto_classes
 
 # Для запуска через терминал
 #$ pytest --cov=src
-#pytest -q py_test_classes.py
+#pytest -q test_py_classes.py
 
 class TestLottoCards():
     #выполняется в каждой последующей функции
