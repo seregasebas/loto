@@ -2,7 +2,7 @@ import unittest
 import loto_classes
 
 # Для запуска через терминал
-#python3 uni_test_classes.py -v
+#python3 test_uni_classes.py -v
 
 class Test_Lotto_Cards(unittest.TestCase):
 
