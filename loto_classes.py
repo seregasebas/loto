@@ -28,12 +28,21 @@ class Lotto_cards():
             print(*self.card[i:i+9])
         print('-'*25)
 
+    def __str__(self):
+        return f'create_card(self) создает карту игрока(компа), show_card(self, card, name) выводит карту'
+
+    def __eq__(self, other):
+        return len(self) == len(other)
+
 '''класс создания игроков и вывода их карт'''
 class Players(Lotto_cards):
 
     def __init__(self, name = 'игрок', name_1 = 'комп'):
         self.name_user = name
         self.name_comp = name_1
+
+    def __str__(self):
+        return f'Имя игрока: {self.name_user}, имя компьтера: {self.name_comp}'
 
 '''класс генерации бочонков'''
 class Barrels():
@@ -43,5 +52,19 @@ class Barrels():
         random.shuffle(barrels)
         self.barrels = barrels
         return self.barrels
+
+    def __str__(self):
+        res = Barrels()
+        self.res = res.bochonki()
+        return f'количсечтво бочонков в мешке в начале игры = {len(self.res)}'
+
+    def len(self):
+        res = Barrels()
+        self.res = res.bochonki()
+        return len(self.res)
+
+    def __eq__(self, other):
+        return len(self) == len(other)
+
     
 
