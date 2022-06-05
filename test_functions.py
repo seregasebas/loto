@@ -19,4 +19,3 @@ def test_player_create_card():
 def test_comp_create_card():
     a = loto_classes.Players.start_card_comp()
     assert len(set(a)) == 16
-
