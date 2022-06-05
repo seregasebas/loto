@@ -146,10 +146,8 @@ def game_comp_comp():
         #задержка вывода, чтобы была видна игра компьютеров
         time.sleep(0.1)
         #выводим карточки
-        print('1')
         player.show_card(comp, player.name_comp)
         player.show_card(comp_1, player.name_comp)
-        print('2')
         if item_barrel in comp:
             ind = comp.index(item_barrel)   
             comp[ind] = '-'
