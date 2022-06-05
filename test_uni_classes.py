@@ -7,35 +7,37 @@ import loto_classes
 class Test_Lotto_Cards(unittest.TestCase):
 
     def setUp(self):
-        self.a = loto_classes.Lotto_cards.create_card()
+        self.a = loto_classes.Lotto_cards()
 
     #проверка функции генерации карты
     def test_create_card(self):
-        self.assertEqual(len(self.a), 27)
+        self.assertEqual(len(self.a.create_card()), 27)
 
     #проверка функции генерации карты
     def test_create_card_set(self):
-        self.assertEqual(len(set(self.a)), 16)
+        self.assertEqual(len(set(self.a.create_card())), 16)
 
 class Test_Barrels(unittest.TestCase):
 
     # выполняется в каждой последующей функции
     def setUp(self):
-        self.a = loto_classes.Barrels.bochonki()
+        self.a = loto_classes.Barrels()
 
     #проверка функции генерации бочонков
     def test_bochonki(self):
-        self.assertEqual(len(self.a), 90)
+        self.assertEqual(len(self.a.bochonki()), 90)
 
 class TestPlayers(unittest.TestCase):
 
-    def test_start_card_user(self):
-        self.user = loto_classes.Lotto_cards.create_card()
+    def test_create_card_player_1(self):
+        self.user = loto_classes.Players()
+        self.user = self.user.create_card()
         self.assertEqual(len(set(self.user)), 16)
 
-    def test_start_card_comp(self):
-        self.computer = loto_classes.Lotto_cards.create_card()
-        self.assertEqual(len(self.computer), 27)
+    def test_create_card_player_2(self):
+        self.user = loto_classes.Players()
+        self.user = self.user.create_card()
+        self.assertEqual(len(self.user), 27)
 
 if __name__ == '__main__':
     unittest.main()
